@@ -1,0 +1,998 @@
+{
+  "info": {
+    "_postman_id": "9558a22b-b305-4348-a64a-5d8813a04a6a",
+    "name": "Global Solution - SOA",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "60270315",
+    "_collection_link": "https://go.postman.co/collection/60270315-9558a22b-b305-4348-a64a-5d8813a04a6a?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "POST /agendamentos",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"solicitante\": \"Arthur Gomes\",\r\n  \"endereco\": \"Fazenda Boa Vista, Rod. SP-55 km 120\",\r\n  \"area_hectares\": 12.5,\r\n  \"data_prevista\": \"2026-12-10\",\r\n  \"descricao\": \"Limpeza de pastagem\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/agendamentos",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "agendamentos"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Response - POST /agendamentos",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"solicitante\": \"Arthur Gomes\",\r\n  \"endereco\": \"Fazenda Boa Vista, Rod. SP-55 km 120\",\r\n  \"area_hectares\": 12.5,\r\n  \"data_prevista\": \"2026-12-10\",\r\n  \"descricao\": \"Limpeza de pastagem\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5000/agendamentos",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5000",
+              "path": [
+                "agendamentos"
+              ]
+            }
+          },
+          "status": "CREATED",
+          "code": 201,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Server",
+              "value": "Werkzeug/3.1.9 Python/3.13.17"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 18 Nov 2026 03:11:40 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "273"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"id\": 2,\n  \"solicitante\": \"Arthur Gomes\",\n  \"endereco\": \"Fazenda Boa Vista, Rod. SP-55 km 120\",\n  \"area_hectares\": 12.5,\n  \"data_prevista\": \"2026-12-10\",\n  \"descricao\": \"Limpeza de pastagem\",\n  \"analise_brigadista\": \"em_analise\",\n  \"criado_em\": \"2026-11-18 00:11:40\"\n}"
+        },
+        {
+          "name": "Response ERRO - POST /agendamentos",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"solicitante\": \"Arthur Gomes\",\r\n  \"endereco\": \"\",\r\n  \"area_hectares\": 12.5,\r\n  \"data_prevista\": \"2026-12-10\",\r\n  \"descricao\": \"Limpeza de pastagem\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5000/agendamentos",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5000",
+              "path": [
+                "agendamentos"
+              ]
+            }
+          },
+          "status": "BAD REQUEST",
+          "code": 400,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Server",
+              "value": "Werkzeug/3.1.9 Python/3.13.17"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 18 Nov 2026 03:15:12 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "60"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"erro\": \"Campos obrigatórios ausentes: endereco\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "GET /agendamentos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/agendamentos",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "agendamentos"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Response - GET /agendamentos",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:5000/agendamentos",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5000",
+              "path": [
+                "agendamentos"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Server",
+              "value": "Werkzeug/3.1.9 Python/3.13.17"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 18 Nov 2026 03:12:03 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "297"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n  {\n    \"id\": 2,\n    \"solicitante\": \"Arthur Gomes\",\n    \"endereco\": \"Fazenda Boa Vista, Rod. SP-55 km 120\",\n    \"area_hectares\": 12.5,\n    \"data_prevista\": \"2026-12-10\",\n    \"descricao\": \"Limpeza de pastagem\",\n    \"analise_brigadista\": \"em_analise\",\n    \"criado_em\": \"2026-11-18 00:11:40\"\n  }\n]"
+        }
+      ]
+    },
+    {
+      "name": "GET /agendamentos/{id}",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/agendamentos/999",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "agendamentos",
+            "999"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Response - GET /agendamentos/{id}",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:5000/agendamentos/2",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5000",
+              "path": [
+                "agendamentos",
+                "2"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Server",
+              "value": "Werkzeug/3.1.9 Python/3.13.17"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 18 Nov 2026 03:12:47 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "269"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"id\": 2,\n  \"solicitante\": \"Arthur Gomes\",\n  \"endereco\": \"Fazenda Boa Vista, Rod. SP-55 km 120\",\n  \"area_hectares\": 22.5,\n  \"data_prevista\": \"2026-12-18\",\n  \"descricao\": \"Limpeza de pastagem\",\n  \"analise_brigadista\": \"aceita\",\n  \"criado_em\": \"2026-11-18 00:11:40\"\n}"
+        },
+        {
+          "name": "Response ERRO - GET /agendamentos/{id}",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:5000/agendamentos/999",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5000",
+              "path": [
+                "agendamentos",
+                "999"
+              ]
+            }
+          },
+          "status": "NOT FOUND",
+          "code": 404,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Server",
+              "value": "Werkzeug/3.1.9 Python/3.13.17"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 18 Nov 2026 03:15:50 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "49"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"erro\": \"Agendamento não encontrado.\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "PUT /agendamentos/{id}",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"solicitante\": \"Arthur Gomes\",\r\n  \"endereco\": \"Fazenda Boa Vista, Rod. SP-55 km 120\",\r\n  \"area_hectares\": 22.5,\r\n  \"data_prevista\": \"2026-12-18\",\r\n  \"descricao\": \"Limpeza de pastagem\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/agendamentos/2",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "agendamentos",
+            "2"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Response - PUT /agendamentos/{id}",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"solicitante\": \"Arthur Gomes\",\r\n  \"endereco\": \"Fazenda Boa Vista, Rod. SP-55 km 120\",\r\n  \"area_hectares\": 22.5,\r\n  \"data_prevista\": \"2026-12-18\",\r\n  \"descricao\": \"Limpeza de pastagem\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5000/agendamentos/2",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5000",
+              "path": [
+                "agendamentos",
+                "2"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Server",
+              "value": "Werkzeug/3.1.9 Python/3.13.17"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 18 Nov 2026 03:12:18 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "273"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"id\": 2,\n  \"solicitante\": \"Arthur Gomes\",\n  \"endereco\": \"Fazenda Boa Vista, Rod. SP-55 km 120\",\n  \"area_hectares\": 22.5,\n  \"data_prevista\": \"2026-12-18\",\n  \"descricao\": \"Limpeza de pastagem\",\n  \"analise_brigadista\": \"em_analise\",\n  \"criado_em\": \"2026-11-18 00:11:40\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "PATCH /agendamentos/{id}",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"analise_brigadista\": \"aceita\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/agendamentos/2",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "agendamentos",
+            "2"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Response - PATCH /agendamentos/{id}",
+          "originalRequest": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"analise_brigadista\": \"aceita\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5000/agendamentos/2",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5000",
+              "path": [
+                "agendamentos",
+                "2"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Server",
+              "value": "Werkzeug/3.1.9 Python/3.13.17"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 18 Nov 2026 03:12:30 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "269"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"id\": 2,\n  \"solicitante\": \"Arthur Gomes\",\n  \"endereco\": \"Fazenda Boa Vista, Rod. SP-55 km 120\",\n  \"area_hectares\": 22.5,\n  \"data_prevista\": \"2026-12-18\",\n  \"descricao\": \"Limpeza de pastagem\",\n  \"analise_brigadista\": \"aceita\",\n  \"criado_em\": \"2026-11-18 00:11:40\"\n}"
+        },
+        {
+          "name": "PATCH /agendamentos/{id}",
+          "originalRequest": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"analise_brigadista\": \"aceita\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5000/agendamentos/2",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5000",
+              "path": [
+                "agendamentos",
+                "2"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Server",
+              "value": "Werkzeug/3.1.9 Python/3.13.17"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 18 Nov 2026 03:12:30 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "269"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"id\": 2,\n  \"solicitante\": \"Arthur Gomes\",\n  \"endereco\": \"Fazenda Boa Vista, Rod. SP-55 km 120\",\n  \"area_hectares\": 22.5,\n  \"data_prevista\": \"2026-12-18\",\n  \"descricao\": \"Limpeza de pastagem\",\n  \"analise_brigadista\": \"aceita\",\n  \"criado_em\": \"2026-11-18 00:11:40\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "DELETE /agendamentos/{id}",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/agendamentos/2",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "agendamentos",
+            "2"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Response - DELETE /agendamentos/{id}",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:5000/agendamentos/2",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5000",
+              "path": [
+                "agendamentos",
+                "2"
+              ]
+            }
+          },
+          "status": "NO CONTENT",
+          "code": 204,
+          "_postman_previewlanguage": "text",
+          "header": [
+            {
+              "key": "Server",
+              "value": "Werkzeug/3.1.9 Python/3.13.17"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 18 Nov 2026 03:12:59 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "text/html; charset=utf-8"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            }
+          ],
+          "cookie": [],
+          "body": ""
+        }
+      ]
+    },
+    {
+      "name": "GET /agendamentos/{id}",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/agendamentos/2",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "agendamentos",
+            "2"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Response ERRO - GET /agendamentos/{id}",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:5000/agendamentos/2",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5000",
+              "path": [
+                "agendamentos",
+                "2"
+              ]
+            }
+          },
+          "status": "NOT FOUND",
+          "code": 404,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Server",
+              "value": "Werkzeug/3.1.9 Python/3.13.17"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 18 Nov 2026 03:17:13 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "49"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"erro\": \"Agendamento não encontrado.\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "POST /brigadistas",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nome\": \"Carla Mendes\", \r\n    \"brigada\": \"Brigada Serra Azul\", \r\n    \"regiao\": \"Vale do Paraíba\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/brigadistas",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "brigadistas"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "POST /brigadistas",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nome\": \"Carla Mendes\", \r\n    \"brigada\": \"Brigada Serra Azul\", \r\n    \"regiao\": \"Vale do Paraíba\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5000/brigadistas",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5000",
+              "path": [
+                "brigadistas"
+              ]
+            }
+          },
+          "status": "CREATED",
+          "code": 201,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Server",
+              "value": "Werkzeug/3.1.9 Python/3.13.17"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 18 Nov 2026 03:58:24 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "149"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"id\": 1,\n  \"nome\": \"Carla Mendes\",\n  \"brigada\": \"Brigada Serra Azul\",\n  \"regiao\": \"Vale do Paraíba\",\n  \"criado_em\": \"2026-11-18 00:58:24\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "GET /brigadistas",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/brigadistas",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "brigadistas"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "New Request",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:5000/brigadistas",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5000",
+              "path": [
+                "brigadistas"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Server",
+              "value": "Werkzeug/3.1.9 Python/3.13.17"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 18 Nov 2026 04:00:14 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "167"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n  {\n    \"id\": 1,\n    \"nome\": \"Carla Mendes\",\n    \"brigada\": \"Brigada Serra Azul\",\n    \"regiao\": \"Vale do Paraíba\",\n    \"criado_em\": \"2026-11-18 00:58:24\"\n  }\n]"
+        }
+      ]
+    },
+    {
+      "name": "GET /brigadistas/{id}",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/brigadistas/1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "brigadistas",
+            "1"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "GET /brigadistas/{id}",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:5000/brigadistas/1",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5000",
+              "path": [
+                "brigadistas",
+                "1"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Server",
+              "value": "Werkzeug/3.1.9 Python/3.13.17"
+            },
+            {
+              "key": "Date",
+              "value": "Wed, 18 Nov 2026 04:01:07 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "149"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"id\": 1,\n  \"nome\": \"Carla Mendes\",\n  \"brigada\": \"Brigada Serra Azul\",\n  \"regiao\": \"Vale do Paraíba\",\n  \"criado_em\": \"2026-11-18 00:58:24\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "GET /brigadistas/{id}/agendamentos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"nome\": \"Carla Mendes\", \r\n    \"brigada\": \"Brigada Serra Azul\", \r\n    \"regiao\": \"Vale do Paraíba\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/brigadistas/1/agendamentos",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "brigadistas",
+            "1",
+            "agendamentos"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
